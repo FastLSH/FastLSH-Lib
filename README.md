@@ -17,12 +17,39 @@ C++ library version of FastLSH. It have been tested on Ubuntu 14.04, 16.04
     make
 ## To Use
 After build, you can find the `libFastLSH.a` in your directory.  
-Move the `./include` directory and `libFastLSH.a` into your project and link them in your source code and makefile.  
+Copy the `./include` directory and `libFastLSH.a` into your project and link them in your source code and makefile.  
 You can find an example project in `./example` directory
 
 ## Example
+An example project is in `./example`
+
+    #include "LSH.h"
+    int main() {
+
+    //new object of LSH
+    LSH mlsh(1000,1000,56,200,1,1.2,100);
+
+    //read from file		
+    mlsh.loadSetQ("./dataset/dataset1000NoIndex.csv",0);
+    mlsh.loadSetN("./dataset/dataset1000NoIndex.csv",0);
+
+    mlsh.setComputeMode(1);
+    mlsh.setThreadMode(1);
+
+    mlsh.reportStatus();
+
+    vector2D candidate = mlsh.getCandidateSet();
+
+    // you can put your code here and use the candidate in the next step
+
+    return 0;
+    }
 
 ## Attention
+The most common error during runtime is  
+   `  Environment variable CLASSPATH not set!`   
+   `  getJNIEnv: getGlobalJNIEnv failed`  
+follow instruction in this [link](http://archive.cloudera.com/cdh/3/hadoop/libhdfs.html#Common+Problems) -- common problems section will most likely solve the problem
 
 ## Documentation
 
