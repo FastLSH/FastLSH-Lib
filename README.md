@@ -14,7 +14,9 @@ C++ library version of FastLSH. It have been tested on Ubuntu 14.04, 16.04
     
 ## Build
     cmake .  
-    make
+    make  
+A pre-build static library is provided as `./libFastLSH.a`   
+    
 ## To Use
 After build, you can find the `libFastLSH.a` in your directory.  
 Copy the `./include` directory and `libFastLSH.a` into your project and link them in your source code and makefile.  
@@ -52,6 +54,8 @@ The most common error during runtime is
 follow instruction in this [link](http://archive.cloudera.com/cdh/3/hadoop/libhdfs.html#Common+Problems) -- common problems section will most likely solve the problem
 
 ## Documentation
+You can find documentaion in line, it follows `Doxygen` style    
+A html documentation is also provided in `./docs/html/index.html`
 
 
 
