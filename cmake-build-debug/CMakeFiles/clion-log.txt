@@ -1,0 +1,7 @@
+/home/peter/clion-2016.3.2/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/peter/FYP/FastLSH-Lib
+-- JNI_INCLUDE_DIRS=/usr/lib/jvm/java-8-openjdk-amd64/include;/usr/lib/jvm/java-8-openjdk-amd64/include/linux;/usr/lib/jvm/java-8-openjdk-amd64/include
+-- JNI_LIBRARIES=/usr/lib/jvm/default-java/jre/lib/amd64/libjawt.so;/usr/lib/jvm/default-java/jre/lib/amd64/server/libjvm.so
+-- Found HDFS/usr/local/hadoop/include
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/peter/FYP/FastLSH-Lib/cmake-build-debug
