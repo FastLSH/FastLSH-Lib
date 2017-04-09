@@ -1,52 +1,30 @@
-<!---![FastLSH_LOGO](https://cloud.githubusercontent.com/assets/11495951/23857476/65d20c38-0838-11e7-9ab4-b73fdaa52911.png))
--->
-[![Build Status](https://travis-ci.org/PeterXUYAOHAI/FastLSH.svg?branch=master)](https://travis-ci.org/PeterXUYAOHAI/FastLSH)
+# FastLSH-Lib
+C++ library version of FastLSH. It have been tested on Ubuntu 14.04, 16.04
 
-This is a C++ implementation of E2LSH and C2LSH. More detail to come.
-The build won't pass now because  travis don't support hadoop environment.
+## Requirement 
+* Hadoop >= 2.7.1  
+    find installation guide [here](http://hadoop.apache.org/#Download+Hadoop)
+* Memcached >= 1.4.34  
+    `sudo apt-get update`  
+    `sudo apt-get install mysql-server php5-mysql php5 php5-memcached memcached`  
+* Redis >= 3.2  
+    find installation guide [here](https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-redis-on-ubuntu-16-04)
+* OpenMP >= 4.5  
+    OpenMP is defaultly in major compilers, you can find related information [here](http://www.openmp.org/resources/openmp-compilers/)
+    
+## Build
+    cmake .  
+    make
+## To Use
+After build, you can find the `libFastLSH.a` in your directory.  
+Move the `./include` directory and `libFastLSH.a` into your project and link them in your source code and makefile.  
+You can find an example project in `./example` directory
 
-##Attention:
-The current version requires certain programs installedfor the full functionality.
-It has been tested on Ubuntu 16.04 with the following programs
-* Hadoop 2.7.3
-* OpenMP 4.5
-* Memcached 1.4.34
-* Redis 3.2
-* OpenMPI 2.02
-* Boost 1.5
-* Spark 2.1.0
+## Example
 
-If you can not fulfill the requisites, try to use CMakeList_safe.txt in the repo and comment the lines where compile error happens.(i.e. Line 32-34 and 42-43 in src/LSH.cpp as well as 9 and 14 in test/driver.cpp) I will creat a safa brach soon.
+## Attention
 
-
-##Parameters
-* ```N``` the number of vectors in the N dataset
-* ```Q``` the number of vectors in the query dataset
-* ```D``` the number of dimensions
-* ```L``` the number of group hash
-* ```K``` the number of lines in each hash group -- the larger the value, the fewer the collisions
-* ```W``` the number of bucket width
-
-## TODO
-* ~~Access to MPI~~
-* ~~Access to Redis~~
-* ~~Access to memcached~~
-* ~~Distributed computing~~
-* ~~Parameter generator~~
-* ~~Rename function names~~
-* ~~Rafactor, apply design patterns~~
-
-## System Structure 
-![system structure](https://cloud.githubusercontent.com/assets/11495951/23577931/713716c4-0106-11e7-9cc2-a0338c80d3b2.PNG)
-
-## Authors
-
-* *Peter XU*  [PeterXUYAOHAI](https://github.com/PeterXUYAOHAI)
-
-
-## Acknowledgments
-
-* Gan, J., Feng, J., Fang, Q., & Ng, W. (2012, May). Locality-sensitive hashing scheme based on dynamic collision counting. In Proceedings of the 2012 ACM SIGMOD International Conference on Management of Data (pp. 541-552). ACM.
+## Documentation
 
 
 
