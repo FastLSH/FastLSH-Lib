@@ -1,3 +1,5 @@
+<img src="https://cloud.githubusercontent.com/assets/11495951/24863520/b913ff9e-1e33-11e7-9b78-e8b692fcf3c5.png" alt="FastLSH_LOGO" style="width: 10;"/>
+
 # FastLSH-Lib
 C++ library version of FastLSH. It have been tested on Ubuntu 14.04, 16.04
 
