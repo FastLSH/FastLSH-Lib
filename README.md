@@ -17,7 +17,7 @@ C++ library version of FastLSH. It have been tested on Ubuntu 14.04, 16.04
 ## Build
     cmake .  
     make  
-A pre-build static library is provided as `./libFastLSH.a`   
+A  pre-build static library is provided as `./libFastLSH.a`   
     
 ## To Use
 After build, you can find the `libFastLSH.a` in your directory.  
